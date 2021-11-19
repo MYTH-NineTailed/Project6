@@ -9,7 +9,7 @@ $user = new User($conn);
 
 if (!$user->isLoggedIn()) 
 {
-    $user->redirect('index.php');
+    $user->redirect('login.php');
 }
 
 

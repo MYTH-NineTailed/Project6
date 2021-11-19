@@ -11,12 +11,12 @@ $user = new User($conn);
 if (isset($_GET['logout']))
 {
     $user->logout();
-    $user->redirect('index.php');
+    $user->redirect('login.php');
 } 
 //als de gebruiker nog is ingelogd, stuur dan naar index die je weer naar home stuurt
 else
 {
-    $user->redirect('index.php');
+    $user->redirect('login.php');
 }
 
 ?>

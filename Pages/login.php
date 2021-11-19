@@ -44,7 +44,7 @@ if (isset($_POST['login']))
 
 <h2>formulier om in te loggen</h2>
 
-<form method="post" action="index.php" name="loginform">
+<form method="post" action="login.php" name="loginform">
 
     <label><b>Email of gebruikersnaam</b></label>
     <input type="text" name="user" required />

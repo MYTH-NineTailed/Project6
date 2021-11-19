@@ -79,7 +79,7 @@ if (isset($_POST['register']))
 if (isset($_GET['joined'])) 
 {
 ?>
-<p>Succesvol geregistreert. je kan nu <a href="index.php">inloggen</a>.</p>
+<p>Succesvol geregistreert. je kan nu <a href="login.php">inloggen</a>.</p>
 <?php
 }
 else 
