@@ -1,0 +1,101 @@
+body {
+    max-width: 1000px;
+    margin: auto;
+    font-family: helvetica, arial;
+    background-color: white;
+  }
+  
+  h1 {
+    margin: 80px 0px 40px 0px;
+    color: blue;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 200;
+  }
+  
+  .product {
+    background-color: white;
+    width: 300px;
+    display: block;
+    padding: 6px;
+    height: auto;
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .product:hover {
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+  }
+  
+  .product:hover .product-image {
+    transition:0.2s;
+    background: blue;
+  }
+  
+  .product-image {
+    transition:0.5s;
+    background: whitesmoke;
+    height: 300px;
+  }
+  
+  .product p {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 18px;
+    color: blue;
+  }
+  
+  .price {
+    color: rgba(0, 0, 0, 0.6);
+    background-color: #ffe68b;
+    display: block;
+    width: 80px;
+    padding: 10px 5px 10px 0px;
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    text-align: right;
+    font-family: courier;
+    border-radius: 2px;
+    filter: drop-shadow(1px 1px 0.8px rgba(0, 0, 0, 0.2));
+    transform: rotateZ(-5deg) scale(1);
+    transition: all 0.5s ease;
+  }
+  
+  body .product:nth-child(4n+2) .price {
+    transform: rotateZ(2deg) scale(1);
+  }
+  
+  body .product:nth-child(2n+3) .price {
+    transform: rotateZ(6deg) scale(1);
+  }
+  
+  .price::before {
+    content: "";
+    padding: 18px;
+    position: absolute;
+    background-color: #ffe68b;
+    left: -6px;
+    top: 1px;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    z-index: -1;
+  }
+  
+  .price::after {
+    content: "";
+    padding: 18px;
+    position: absolute;
+    background-color: #ffe68b;
+    right: -6px;
+    top: 1px;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+    z-index: -1;
+  }
