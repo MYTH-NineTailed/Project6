@@ -2,8 +2,8 @@
 
 session_start();
 
-require_once('config/dbconnect.php');
-require_once('classes/Class.User.php');
+require_once('../config/dbconnect.php');
+require_once('../classes/Class.User.php');
 
 $user = new User($conn);
 
