@@ -69,6 +69,7 @@ if (isset($_POST['register']))
 </style>
 <head>
     <title>Register</title>
+    <link rel="stylesheet" href="../scripts/style_login.css">
 </head>
 
 <body>
@@ -87,6 +88,13 @@ else
 
 }
 ?>
+
+<!-- Achtergrond met shapes -->
+<div class="background">
+   <div class="shape"></div>
+   <div class="shape"></div>
+</div>
+
 <form method="post" action="register.php" name="registerform">
 
     <label><b>Username</b></label>
@@ -100,8 +108,9 @@ else
     
     <label><b>Repeat Password</b></label>
     <input type="password" name="passwordrepeat" auto_complete="off" required />
-    
-    <input type="submit" name="register" value="Register" />
+
+    <input class="button" type="submit" name="login" value="Log in" />
+    <input class="button" type="submit" name="register" value="Registreren"/>
     
  </form>
  </body>

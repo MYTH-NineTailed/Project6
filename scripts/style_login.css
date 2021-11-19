@@ -1,160 +1,105 @@
-body {
-    background-image: linear-gradient(#fe7763, #fc3a5d);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100%;
+*,
+*:before,
+*:after{
+    padding: 0;
     margin: 0;
-    display: flex;
-    align-items: center;
-    color: white;
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    justify-content: center;
-  }
-  
-  a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    outline: none;
-    transition: all 0.2s;
-  }
-  
-  a:hover,
-  a:focus {
-    color: #fdc654;
-    transition: all 0.2s;
-  }
-  
-  html {
-    height: 100%;
-  }
-  
-  .login-card {
-    padding: 32px 32px 0;
     box-sizing: border-box;
-    text-align: center;
-    width: 100%;
-    display: flex;
-    height: 100%;
-    max-height: 740px;
-    max-width: 350px;
-    flex-direction: column;
-  }
-  
-  .login-card-content {
-    flex-grow: 2;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .login-card-footer {
-    padding: 32px 0;
-  }
-  
-  h2 .highlight {
-    color: #fdc654;
-  }
-  
-  h2 {
-    font-size: 32px;
-    margin: 0;
-  }
-  
-  h3 {
-    color: #d61e2d;
-    font-size: 14px;
-    line-height: 18px;
-    margin: 0;
-  }
-  
-  .header {
-    margin-bottom: 50px;
-  }
-  
-  .logo {
-    border-radius: 40px;
-    width: 200px;
+}
+body{
+    background-color: #080710;
+}
+/* Background */
+.background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape{
     height: 200px;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto 16px;
-    background: rgba(255, 255, 255, 0.1);
-    align-items: center;
-  }
-  
-  button {
-    background: white;
-    display: block;
-    color: #d61e2d;
-    width: 100%;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.shape:first-child{
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left: -80px;
+    top: -80px;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: -30px;
+    bottom: -80px;
+}
+/* formulier */
+form{
+    height: 520px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
     border: none;
-    border-radius: 40px;
-    padding: 12px 0;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 32px;
-    outline: none;
-  }
-  
-  .form-field {
-    margin-bottom: 16px;
-    width: 100%;
-    position: relative;
-  }
-  
-  .form-field .icon {
-    position: absolute;
-    background: white;
-    color: #d61e2d;
-    left: 0;
-    top: 0;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    width: 40px;
-    height: 40px;
-    justify-content: center;
-    border-radius: 20px;
-  }
-  
-  .form-field .icon:after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border: 12px solid transparent;
-    border-left: 12px solid white;
-    position: absolute;
-    top: 8px;
-    right: -20px;
-  }
-  
-  .form-field input {
-    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
     text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 50px;
     width: 100%;
-    border-radius: 16px;
-    height: 36px;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    outline: none;
-    transition: all 0.2s;
-  }
-  
-  .form-field input::placeholder {
-    color: white;
-  }
-  
-  .form-field input:hover,
-  .form-field input:focus {
-    background: white;
-    color: #d61e2d;
-    transition: all 0.2s;
-  }
-  
-  .form-field input:hover::placeholder {
-    color: #d61e2d;
-  }
-  
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #e5e5e5;
+}
+
+.button {
+        width: 100%;
+        background-color: #ffffff;
+        color: #080710;
+        padding: 15px 0;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+}
