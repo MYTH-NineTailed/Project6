@@ -1,6 +1,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="scripts/style.css">
+<title>Project 6</title>
 </head>
 
 <body>
