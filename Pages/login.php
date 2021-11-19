@@ -29,7 +29,6 @@ if (isset($_POST['login']))
         echo $login;
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -58,12 +57,11 @@ if (isset($_POST['login']))
     <label><b>Password</b></label>
     <input type="password" name="password" auto_complete="off" required/>
     
-    <input class="button" type="submit" name="login" value="Log in" />
-    <input class="button" type="submit" name="register" value="Registreren"/>
+    <input class="button" type="submit" name="login" value="Log in"> </input>
+    <br>
+    <a href="register.php">Registreer nieuw account</a>
     
  </form>
- 
- <a href="register.php">Registreer nieuw account</a>
  
  </body>
  </html>
