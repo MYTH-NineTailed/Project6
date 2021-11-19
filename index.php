@@ -5,7 +5,7 @@
 </head>
 
 <body>
-<!-- Search bar -->
+<!-- Zoekbalk -->
 <div class="wrap">
    <div class="search">
       <input type="text" class="searchTerm" placeholder="What are you looking for?">
