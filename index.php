@@ -5,10 +5,20 @@
 </head>
 
 <body>
+<!-- Search bar -->
+<div class="wrap">
+   <div class="search">
+      <input type="text" class="searchTerm" placeholder="What are you looking for?">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+     </button>
+   </div>
+</div>
+<!-- Producten -->
   <h1>Classic Price Tag</h1>
 <div class="product">
   <div class="product-image"></div> 
-    <span class="price">495,-</span>
+    <span class="price">495,- <!-- <?php echo $price ?> --></span>
     <p>Very Product</p>
 </div>
 
