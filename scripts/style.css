@@ -149,7 +149,7 @@ body {
     border-color: #00B4CC;
     color: #fff;
     float: right;
-    text-align: center; 
+    text-align: center;
     margin-left: 100px;
     font-size: 15px;
     border: 1px solid #00B4CC;
@@ -164,8 +164,8 @@ body {
     border-color: #00B4CC;
     color: #fff;
     float: left;
-    text-align: center; 
-    margin-left: 100px;
+    text-align: center;
+    margin-left: 10px; 
     font-size: 15px;
     border: 1px solid #00B4CC;
     border-radius: 44px;

@@ -14,8 +14,8 @@
      </button>
 
 <!-- Login knop  -->
-<button class="login-btn">Login</button>
-<button class="signup-btn">Sign-up</button>
+<a class="login-btn" href="pages/login.php">Login</a>
+<a class="signup-btn" href="pages/register.php">Sign-up</a>
   </div>
 </div>
 
