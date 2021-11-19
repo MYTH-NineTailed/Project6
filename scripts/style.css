@@ -142,3 +142,19 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  /* Login button */
+  .login-btn {
+    background: #45aba6;
+    border-color: #45aba6;
+    color: #fff;
+    float: right;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 15px;
+    border: 1px solid #45aba6;
+    border-radius: 44px;
+    width: 8%;
+    height: 40px;
+    cursor: pointer;
+  }

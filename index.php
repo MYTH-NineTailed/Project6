@@ -14,6 +14,10 @@
      </button>
    </div>
 </div>
+
+<!-- Login knop  -->
+<button class="login-btn">Login</button>
+
 <!-- Producten -->
   <h1>Classic Price Tag</h1>
 <div class="product">
