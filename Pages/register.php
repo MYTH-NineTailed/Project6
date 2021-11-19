@@ -96,6 +96,7 @@ else
 </div>
 
 <form method="post" action="register.php" name="registerform">
+<h3>Registration Form</h3>
 
     <label><b>Username</b></label>
     <input type="text" name="username" required />
@@ -109,9 +110,9 @@ else
     <label><b>Repeat Password</b></label>
     <input type="password" name="passwordrepeat" auto_complete="off" required />
 
-    <input class="button" type="submit" name="login" value="Log in" />
     <input class="button" type="submit" name="register" value="Registreren"/>
-    
+    <br>
+    <a href="login.php">Al een account?</a>  
  </form>
  </body>
  </html>

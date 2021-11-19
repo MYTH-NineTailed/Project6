@@ -8,6 +8,7 @@
 body{
     background-color: #080710;
 }
+
 /* Background */
 .background{
     width: 430px;
@@ -35,15 +36,15 @@ body{
 .shape:last-child{
     background: linear-gradient(
         to right,
-        #ff512f,
-        #f09819
+        #23a2f6,
+        #1845ad
     );
     right: -30px;
     bottom: -80px;
 }
 /* formulier */
 form{
-    height: 520px;
+    height: 550px;
     width: 400px;
     background-color: rgba(255,255,255,0.13);
     position: absolute;

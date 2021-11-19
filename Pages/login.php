@@ -41,14 +41,15 @@ if (isset($_POST['login']))
 </head>
 
 <body>
+
 <!-- Achtergrond met shapes -->
 <div class="background">
    <div class="shape"></div>
    <div class="shape"></div>
 </div>
 
+<!-- Formulier inloggen -->
 <form method="post" action="login.php" name="loginform">
-
 <h3>formulier om in te loggen</h3>
 
     <label><b>Email of gebruikersnaam</b></label>
@@ -60,7 +61,6 @@ if (isset($_POST['login']))
     <input class="button" type="submit" name="login" value="Log in"> </input>
     <br>
     <a href="register.php">Registreer nieuw account</a>
-    
  </form>
  
  </body>
