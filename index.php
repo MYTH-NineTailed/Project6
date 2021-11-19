@@ -12,11 +12,12 @@
       <button type="submit" class="searchButton">
         <i class="fas fa-search"></i>
      </button>
-   </div>
-</div>
 
 <!-- Login knop  -->
 <button class="login-btn">Login</button>
+<button class="signup-btn">Sign-up</button>
+  </div>
+</div>
 
 <!-- Producten -->
   <h1>Classic Price Tag</h1>
