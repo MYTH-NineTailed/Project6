@@ -74,8 +74,6 @@ if (isset($_POST['register']))
 
 <body>
 
-<h2>Registration Form</h2>
-
 <?php
 if (isset($_GET['joined'])) 
 {
@@ -95,8 +93,9 @@ else
    <div class="shape"></div>
 </div>
 
-<form method="post" action="register.php" name="registerform">
 <h3>Registration Form</h3>
+
+<form method="post" action="register.php" name="registerform">
 
     <label><b>Username</b></label>
     <input type="text" name="username" required />

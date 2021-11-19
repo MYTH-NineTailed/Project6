@@ -9,6 +9,18 @@ body{
     background-color: #080710;
 }
 
+h1, h2, h3 {
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
 /* Background */
 .background{
     width: 430px;
@@ -44,7 +56,7 @@ body{
 }
 /* formulier */
 form{
-    height: 550px;
+    height: 520px;
     width: 400px;
     background-color: rgba(255,255,255,0.13);
     position: absolute;
@@ -55,7 +67,7 @@ form{
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255,255,255,0.1);
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    padding: 50px 35px;
+    padding: 0 35px;
 }
 
 form *{
@@ -75,7 +87,7 @@ form h3{
 
 label{
     display: block;
-    margin-top: 30px;
+    margin-top: 20px;
     font-size: 16px;
     font-weight: 500;
 }

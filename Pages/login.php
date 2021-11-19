@@ -48,9 +48,10 @@ if (isset($_POST['login']))
    <div class="shape"></div>
 </div>
 
+<h3>formulier om in te loggen</h3>
+
 <!-- Formulier inloggen -->
 <form method="post" action="login.php" name="loginform">
-<h3>formulier om in te loggen</h3>
 
     <label><b>Email of gebruikersnaam</b></label>
     <input type="text" name="user" required />
