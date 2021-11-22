@@ -14,7 +14,7 @@
      </button>
 
 <!-- Login knop  -->
-<a class="login-btn" href="pages/login.php">Login</a>
+<a class="login-btn" href="pages/login.php">Login</a> <!-- <?php echo $_SESSION['userName']; ?> -->
 <a class="signup-btn" href="pages/register.php">Sign-up</a>
   </div>
 </div>

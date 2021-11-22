@@ -13,7 +13,7 @@ $validate = new Validate($conn);
 //als de gebruiker is ingelogd, ga dan naar de home page
 if ($user->isLoggedIn()) 
 {
-    $user->redirect('home.php');
+    $user->redirect('../index.php');
 }
 
 $errors = array();
