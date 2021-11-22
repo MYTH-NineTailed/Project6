@@ -34,6 +34,15 @@ class Product
     public function getCode()
     {
         return $this->code;
+        
+        $stmt = $this->db->prepare("SELECT product (product_name, product_price, product_image, product_description) VALUES (?,?,?,?)");
+        $stmt->bind_param("sss", $pname, $pprice, $pimage, $pdescription);
+        
+        if($stmt->execute()) {
+            return true;
+        } else {
+            return $stmt->error;
+        }
     }
 
     /**
