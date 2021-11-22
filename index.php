@@ -8,7 +8,7 @@
 <!-- Zoekbalk-->
 <div class="wrap">
    <div class="search">
-      <input type="text" class="searchTerm" placeholder="What are you looking for?">
+      <input type="text" class="searchTerm" placeholder="Welke producten bent u aan het zoeken?">
       <button type="submit" class="searchButton">
         <i class="fas fa-search"></i>
      </button>
@@ -22,7 +22,7 @@
 <!-- Producten -->
   <h1>Classic Price Tag</h1>
 <div class="product">
-  <div class="product-image"></div> 
+  <div class="product-image"><!-- <?php echo $image ?> --></div> 
     <span class="price">495,- <!-- <?php echo $price ?> --></span>
     <p>Very Product</p>
 </div>
