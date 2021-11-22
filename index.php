@@ -1,3 +1,8 @@
+<?php 
+
+require 'config/dbconnect.php';
+
+?>
 <html>
 <head>
 <link rel="stylesheet" href="scripts/style.css">
@@ -14,7 +19,7 @@
      </button>
 
 <!-- Login knop  -->
-<a class="login-btn" href="pages/login.php">Login</a> <!-- <?php echo $_SESSION['userName']; ?> -->
+<a class="login-btn" href="pages/login.php">Login</a> <!-- <?php echo $_SESSION['userName']; ?>  -->
 <a class="signup-btn" href="pages/register.php">Sign-up</a>
   </div>
 </div>
