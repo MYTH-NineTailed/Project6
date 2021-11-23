@@ -2,6 +2,7 @@
 require '../classes/Product.php';
 require '../classes/ShoppingCart.php';
 require '../config/dbconnect.php';
+
 session_start();
 /**
  * Als er nog geen winkelwagen is opgeslagen in de sessie
