@@ -21,7 +21,6 @@ class Product {
     public function __construct(/* $code, $title, $image_url, $price, $description */)
     {
         $dsn = "mysql:host=localhost;dbname=project_6;charset=utf8mb4";
-
         $this->db = new PDO($dsn, 'root', '');
 
 
@@ -40,14 +39,14 @@ class Product {
     {
         // return $this->code;
         
-        $stmt = $this->db->prepare("SELECT product_id, product_name, product_price, product_image FROM product");
-        
+        $stmt = $this->db->prepare("SELECT product_id, product_name, product_price, product_image, product_description FROM product");
         $stmt->execute();
 
         while($row = $stmt->fetch(PDO::FETCH_OBJ)) {
             //echo "<pre>".print_r($row, true)."</pre>" ;
-            echo "<br>Product id {$row->product_id}, naam = {$row->product_name} kost &euro; ". number_format($row->product_price, 2, ',', '.');
+            echo "<br>Product id {$row->product_id} <br> naam = {$row->product_name} <br> description = {$row->product_description} <br> kost &euro; ". number_format($row->product_price, 2, ',', '.') . "<br>";
             echo '<img src="data:image/jpeg;base64,'.base64_encode($row->product_image).'"/>';
+            echo "<br>";
         }
 exit();
 
@@ -66,7 +65,8 @@ exit();
      */
     public function getTitle()
     {
-        return $this->title;
+        // return $this->title;
+        return $row->product_name;
     }
 
 
@@ -91,7 +91,7 @@ exit();
      */
     public function getPrice()
     {
-        return $this->price;
+        return $row->product_price;
     }
 
 

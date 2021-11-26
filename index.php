@@ -28,7 +28,7 @@ require 'config/dbconnect.php';
   <h1>Classic Price Tag</h1>
 <div class="product">
   <div class="product-image"><!-- <?php echo $image ?> --></div> 
-    <span class="price">495,- <!-- <?php echo $price ?> --></span>
+    <span class="price">495,- <!-- <?php echo getPrice(); ?> --></span>
     <p>Very Product</p>
 </div>
 
