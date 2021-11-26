@@ -5,7 +5,7 @@ session_start();
 require_once('../config/dbconnect.php');
 require_once('../classes/Class.User.php');
 
-$user = new User($conn);
+$user = new User($pdo);
 
 //als je al bent ingelogd, ga dan naar de home pagina
 if ($user->isLoggedIn()) 

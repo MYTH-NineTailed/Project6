@@ -6,9 +6,9 @@ require_once('../config/dbconnect.php');
 require_once('../classes/Class.User.php');
 require_once('../classes/Class.Validate.php');
 
-$user = new User($conn);
+$user = new User($pdo);
 
-$validate = new Validate($conn);
+$validate = new Validate($pdo);
 
 //als de gebruiker is ingelogd, ga dan naar de home page
 if ($user->isLoggedIn()) 
