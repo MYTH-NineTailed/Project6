@@ -1,5 +1,4 @@
 <?php
-require '../config/dbconnect.php';
 // echo "<pre>".print_r($pdo, true)."</pre>" ; exit();
 
 /**
@@ -44,11 +43,11 @@ class Product {
 
         while($row = $stmt->fetch(PDO::FETCH_OBJ)) {
             //echo "<pre>".print_r($row, true)."</pre>" ;
-            echo "<br>Product id {$row->product_id} <br> naam = {$row->product_name} <br> description = {$row->product_description} <br> kost &euro; ". number_format($row->product_price, 2, ',', '.') . "<br>";
-            echo '<img src="data:image/jpeg;base64,'.base64_encode($row->product_image).'"/>';
-            echo "<br>";
+            // echo "<br>Product id {$row->product_id} <br> naam = {$row->product_name} <br> description = {$row->product_description} <br> kost &euro; ". number_format($row->product_price, 2, ',', '.') . "<br>";
+            // echo '<img src="data:image/jpeg;base64,'.base64_encode($row->product_image).'"/>';
+            // echo "<br>";
         }
-exit();
+ exit();
 
         if($stmt->execute()) {
             $row == $stmt->fetch(PDO::FETCH_ASSOC);
@@ -63,10 +62,9 @@ exit();
     /**
      * het ophalen van de titel
      */
-    public function getTitle()
+     public function getTitle()
     {
-        // return $this->title;
-        return $row->product_name;
+        return $this->db->prepare("SELECT product_name VALUES 'product_name' FROM product");
     }
 
 
@@ -75,7 +73,7 @@ exit();
      */
     public function getDescription()
     {
-        return $this->description;
+        return $this->db->prepare("SELECT product_description VALUES 'product_description' FROM product");
     }
 
     /**
@@ -83,7 +81,7 @@ exit();
      */
     public function getImage()
     {
-        return $this->image_url;
+        return $this->db->prepare("SELECT product_image VALUES 'product_image' FROM product");
     }
 
     /**
@@ -91,11 +89,6 @@ exit();
      */
     public function getPrice()
     {
-        return $row->product_price;
+        return $this->db->prepare("SELECT product_price VALUES 'product_price' FROM product");
     }
-
-
 }
-
-$test = new Product();
-$test->getCode();

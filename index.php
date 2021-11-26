@@ -1,6 +1,7 @@
 <?php 
 
 require 'config/dbconnect.php';
+require 'classes/Product.php';
 
 ?>
 <html>
@@ -25,11 +26,12 @@ require 'config/dbconnect.php';
 </div>
 
 <!-- Producten -->
+<?php foreach ("SELECT * FROM product AS $product") ?>
   <h1>Classic Price Tag</h1>
 <div class="product">
-  <div class="product-image"><!-- <?php echo $image(); ?> --></div> 
-    <span class="price">495,- <!-- <?php echo getPrice(); ?> --></span>
-    <p>Very Product</p>
+  <div class="product-image"></div> 
+    <span class="price">495,- <!-- <?php echo $product->getPrice(); ?> --></span>
+    <p><?php echo $product->getTitle() ?></p>
 </div>
 
 <div class="product">
@@ -74,6 +76,7 @@ require 'config/dbconnect.php';
     <span class="price">325,-</span>
     <p>Very Cheap</p>
 </div>
+<?php endforeach; ?>
   
 </body>
 
