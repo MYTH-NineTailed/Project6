@@ -5,7 +5,7 @@ session_start();
 require_once("../config/dbconnect.php");
 require_once('../classes/Class.User.php');
 
-$user = new User($conn);
+$user = new User($pdo);
 
 //log de gebruiker uit en stuur terug naar index
 if (isset($_GET['logout']))

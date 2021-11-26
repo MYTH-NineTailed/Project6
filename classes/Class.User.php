@@ -5,9 +5,9 @@ Class User {
     
     private $db;
     
-    public function __construct ($conn) {  
+    public function __construct ($pdo) {  
     
-        $this->db = $conn;  
+        $this->db = $pdo;  
         
     }
     
