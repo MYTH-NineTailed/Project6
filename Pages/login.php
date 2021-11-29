@@ -42,13 +42,13 @@ if (isset($_POST['login']))
 
 <body>
 
+<h3>formulier om in te loggen</h3>
+
 <!-- Achtergrond met shapes -->
 <div class="background">
    <div class="shape"></div>
    <div class="shape"></div>
 </div>
-
-<h3>formulier om in te loggen</h3>
 
 <!-- Formulier inloggen -->
 <form method="post" action="login.php" name="loginform">

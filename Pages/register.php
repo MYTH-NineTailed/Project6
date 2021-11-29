@@ -87,13 +87,13 @@ else
 }
 ?>
 
+<h3>Registration Form</h3>
+
 <!-- Achtergrond met shapes -->
 <div class="background">
    <div class="shape"></div>
    <div class="shape"></div>
 </div>
-
-<h3>Registration Form</h3>
 
 <form method="post" action="register.php" name="registerform">
 
