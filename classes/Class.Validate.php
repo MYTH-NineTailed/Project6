@@ -25,13 +25,12 @@ Class Validate {
             return 'Username cannot include special characters';
         } else {
             $uname = strip_tags($uname);
-            
+           
             //Query database for duplicate username
             $stmt = $this->db->prepare("SELECT userName FROM users WHERE userName = ?");
             $stmt->bind_param("s", $uname);
             $stmt->execute();
             $stmt->store_result();
-            
             //If duplicate username, throw error, else return username
             if ($stmt->num_rows !== 0) {
                 return 'Username is already taken';        
