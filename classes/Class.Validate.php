@@ -1,5 +1,7 @@
 <?php
 
+require '../config/dbconnect.php';
+
 Class Validate {
     
     private $db;
