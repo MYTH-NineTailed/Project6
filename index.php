@@ -44,7 +44,6 @@ require 'classes/Product.php';
 <li><a href="#">Consolestandaard</a></li>
 <li><a href="#">Gamingmuizen</a></li>
 <li><a href="#">Racestuuraccessoires</a></li>
-<li><a href="#">Gaming toetsenborden</a></li>
 </ul>
 </li>
 
@@ -57,7 +56,7 @@ require 'classes/Product.php';
 <input class='searchbar' name='q' placeholder='Zoek hier' size='30' type='text'/>
 <input class='searchsubmit' type='submit' value='Zoeken'/>
 </form>
-  <p class='search-alert'>Search form is empty!</p>
+  <p class='search-alert'>U heeft niks ingevuld!</p>
 </li>    
 </ul>
 </ul>
