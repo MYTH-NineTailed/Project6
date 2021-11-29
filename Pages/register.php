@@ -87,8 +87,6 @@ else
 }
 ?>
 
-<h3>Registration Form</h3>
-
 <!-- Achtergrond met shapes -->
 <div class="background">
    <div class="shape"></div>
@@ -96,7 +94,7 @@ else
 </div>
 
 <form method="post" action="register.php" name="registerform">
-
+<h3>Registreren</h3>
     <label><b>Username</b></label>
     <input type="text" name="username" required />
     

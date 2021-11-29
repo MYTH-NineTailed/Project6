@@ -5,25 +5,65 @@ require 'classes/Product.php';
 
 ?>
 <html>
+
 <head>
+<meta charset="UTF-8">
+<meta name="author" content="Team ACMR">
 <link rel="stylesheet" href="scripts/style.css">
+<link rel="stylesheet" href="scripts/navbar.css">
 <title>Project 6</title>
 </head>
 
 <body>
-<!-- Zoekbalk-->
-<div class="wrap">
-   <div class="search">
-      <input type="text" class="searchTerm" placeholder="Welke producten bent u aan het zoeken?">
-      <button type="submit" class="searchButton">
-        <i class="fas fa-search"></i>
-     </button>
+  
+<!-- Navigatie menu -->
+<body>  
+<ul id="nav_menu" class="nav_class">
+<li>
+<a href="#">Games</a>
+<ul>
+<li><a href="#">Actie</a></li>
+<li><a href="#">Adventure</a></li>
+<li><a href="#">Sport</a></li>
+<li><a href="#">Shooter</a></li>
+<li><a href="#">Vechten</a></li>
+</ul>
+</li>
+<li>
+<a href="#">Consoles</a>
+<ul>
+<li><a href="#">Playstation</a></li>
+<li><a href="#">Xbox</a></li>
+<li><a href="#">Nintendo</a></li>
+</ul>
+</li>
+<li>
+<a href="#">Accessoires</a>
+<ul>
+<li><a href="#">Accessoirepakketten</a></li>
+<li><a href="#">Consolestandaard</a></li>
+<li><a href="#">Gamingmuizen</a></li>
+<li><a href="#">Racestuuraccessoires</a></li>
+<li><a href="#">Gaming toetsenborden</a></li>
+</ul>
+</li>
 
-<!-- Login knop  -->
-<a class="login-btn" href="pages/login.php">Login</a> <!-- <?php echo $_SESSION['userName']; ?>  -->
-<a class="signup-btn" href="pages/register.php">Sign-up</a>
-  </div>
-</div>
+<li><a href="pages/login.php">Login</a></li>
+<li><a href="pages/register.php">Registreren</a></li>
+
+<!-- Zoekbalk -->
+<li class='search-form'>
+<form action='/search' class='searchblog' method='get'>
+<input class='searchbar' name='q' placeholder='Zoek hier' size='30' type='text'/>
+<input class='searchsubmit' type='submit' value='Zoeken'/>
+</form>
+  <p class='search-alert'>Search form is empty!</p>
+</li>    
+</ul>
+</ul>
+
+<!------------- - ------------->
+
 
 <?php $product = new Product(); ?>
 

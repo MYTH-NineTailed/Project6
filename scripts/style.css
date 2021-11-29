@@ -2,7 +2,7 @@ body {
     max-width: 1000px;
     margin: auto;
     font-family: helvetica, arial;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.692);
   }
   
   h1 {
