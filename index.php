@@ -25,13 +25,14 @@ require 'classes/Product.php';
   </div>
 </div>
 
+<?php $product = new Product(); ?>
+
 <!-- Producten -->
-<?php foreach ("SELECT * FROM product AS $product") ?>
-  <h1>Classic Price Tag</h1>
+  <h1><?php echo intval($title); ?></h1>
 <div class="product">
-  <div class="product-image"></div> 
-    <span class="price">495,- <!-- <?php echo $product->getPrice(); ?> --></span>
-    <p><?php echo $product->getTitle() ?></p>
+  <div class="product-image"><?php echo $product->$image ?></div> 
+    <span class="price"><?php echo $product->$price; ?></span>
+    <p><?php echo $product->$description; ?></p>
 </div>
 
 <div class="product">
@@ -76,7 +77,6 @@ require 'classes/Product.php';
     <span class="price">325,-</span>
     <p>Very Cheap</p>
 </div>
-<?php endforeach; ?>
   
 </body>
 
