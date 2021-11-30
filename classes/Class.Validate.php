@@ -2,7 +2,7 @@
 
 require '../config/dbconnect.php';
 
-Class Validate {
+class Validate {
     
     private $db;
     
@@ -27,15 +27,23 @@ Class Validate {
             $uname = strip_tags($uname);
            
             //Query database for duplicate username
-            $stmt = $this->db->prepare("SELECT userName FROM users WHERE userName = ?");
-            $stmt->bind_param("s", $uname);
-            $stmt->execute();
-            $stmt->store_result();
+            $stmt = $this->db->prepare("SELECT count(userName) FROM users WHERE userName = ?");
+            $stmt->execute(   [  $uname   ]);
+            $aantal ->fetchColumn(PDO::FETCH_OBJ);
+
+            //$stmt->store_result(); // ?? Er is nergens deze functie gedefinieerd...
+
             //If duplicate username, throw error, else return username
-            if ($stmt->num_rows !== 0) {
-                return 'Username is already taken';        
-            }
+            // if ($stmt->num_rows !== 0) {
+            //     return 'Username is already taken';        
+            // }
             
+            if($aantal == 1) {
+                return 'Username is already taken';
+            }
+            else {
+                return '';
+            }
         }
         
     }
@@ -54,12 +62,12 @@ Class Validate {
             
             //Query database for duplicate email
             $stmt = $this->db->prepare("SELECT userEmail FROM users WHERE userEmail = ?");
-            $stmt->bind_param("s", $email);
-            $stmt->execute();
-            $stmt->store_result();
+            // $stmt->bind_param("s", $email);
+            $stmt->execute([$email]);
+            $aantal->fetchColumn(PDO::FETCH_OBJ);
             
             //If duplicate email, throw error, else return email
-            if ($stmt->num_rows != 0) {
+            if ($aantal != 0) {
                 return 'Email is already in use';        
             }
             
@@ -68,6 +76,7 @@ Class Validate {
     }
     
     //Returns validated password or throws an error
+    
     public function passwordValidate($pass, $pass2) {
         
         if (empty($pass) || empty($pass2)) {
@@ -81,5 +90,3 @@ Class Validate {
     }
     
 }
-
-?>
