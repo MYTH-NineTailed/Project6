@@ -64,7 +64,7 @@ require 'classes/Product.php';
 
 
 <?php $product = new Product();
-$product->getproduct() ?>
+$product->getproduct()?>
 <!-- Producten -->
 <div class="product">
   <div class="product-image"><?php echo $product->getImage();?></div> 

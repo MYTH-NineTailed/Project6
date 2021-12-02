@@ -23,7 +23,7 @@ class Product {
     }
     
     /**
-     * haal de gegevens op van één product
+     * haal de gegevens op van alle producten
      * en vul de afzonderlijke private properties
      */
     public function getProduct() {
@@ -38,7 +38,7 @@ class Product {
     }
 
     /**
-     * het ophalen van de beschrijving
+     * het ophalen van de id
      */
 
     public function getId()
@@ -46,28 +46,43 @@ class Product {
         return $this->id;
     }
 
+    /**
+     * het ophalen van de titel
+     */
+
     public function getTitle()
     {
         return $this->title;
     }
 
+    /**
+     * het ophalen van de prijs
+     */
+
     public function getPrice($currency = "&euro;")
     {
         return $currency.'&nbsp;'.number_format($this->price, 2, ',','.');
     }
+    
+    /**
+     * het ophalen van de categorie
+     */
 
     public function getCategory()
     {
         return $this->category;
     }
-
+    
+    /**
+     * het ophalen van de beschrijving
+     */
     public function getDescription()
     {
         return $this->description;
     }
 
     /**
-     * het ophalen van de afbeelding. Standaardbreedte is 200, maar kan gezet worden
+     * het ophalen van de afbeelding.
      */
     public function getImage($wdt=300)
     {
