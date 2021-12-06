@@ -51,11 +51,11 @@ class User {
                 
                 return true;
             } else {
-                return 'Wrong password';
+                return 'verkeerd wachtwoord';
             }
             
         } else {
-            return 'Wrong username or email';
+            return 'verkeerd gebruikersnaam of email';
         }
         
     }

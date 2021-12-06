@@ -6,10 +6,12 @@ class ShoppingCart
 
     private $products;
     private $fullPrice;
+    private $db;
 
     public function __construct()
     {
-        $this->products = [];
+        $dsn = "mysql:host=localhost;dbname=project_6;charset=utf8mb4";
+        $this->db = new PDO($dsn, 'root', '');
     }
 
     /**

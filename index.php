@@ -49,6 +49,7 @@ require 'classes/Product.php';
 
 <li><a href="pages/login.php">Login</a></li>
 <li><a href="pages/register.php">Registreren</a></li>
+<li><a href="../Pages/cart.php" class="cart-icon">Winkelwagen</a></li>  
 
 <!-- Zoekbalk -->
 <li class='search-form'>
@@ -57,9 +58,11 @@ require 'classes/Product.php';
 <input class='searchsubmit' type='submit' value='Zoeken'/>
 </form>
   <p class='search-alert'>U heeft niks ingevuld!</p>
-</li>    
+</li>  
 </ul>
 </ul>
+
+
 
 
 
@@ -67,7 +70,7 @@ require 'classes/Product.php';
 $product->getproduct()?>
 <!-- Producten -->
 <div class="product">
-  <div class="product-image"><?php echo $product->getImage();?></div> 
+    <div onclick="window.location = 'pages/productinfo.php?product=<?php echo $product->getProduct() ?>';" class="product-image"><?php echo $product->getImage();?></div> 
     <span class="price"><?php echo $product->getPrice(); ?></span>
     <p><?php echo $product->getTitle(); ?></p>
 </div>

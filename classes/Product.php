@@ -10,7 +10,6 @@ class Product {
     private $image_url;
     private $price;
     private $description;
-    private $code;
     private $db;
 
     /**
@@ -29,12 +28,13 @@ class Product {
     public function getProduct() {
         $stmt = $this->db->prepare("SELECT * FROM product");
         $stmt->execute();
+        $data = $stmt->fetch(PDO::FETCH_NUM);
         list($this->id, 
             $this->title, 
             $this->category, 
             $this->price,
             $this->image_url,
-            $this->description) = $stmt->fetch(PDO::FETCH_NUM);
+            $this->description) = $data;
     }
 
     /**
