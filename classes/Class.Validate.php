@@ -28,8 +28,8 @@ class Validate {
            
             //Query database voor duplicate gebruikersnaam
             $stmt = $this->db->prepare("SELECT count(userName) FROM users WHERE userName = ?");
-            $stmt->execute(   [  $uname   ]);
-            $aantal->fetchColumn(PDO::FETCH_OBJ);
+            $stmt->execute( [  $uname   ] );
+            $aantal = $stmt->fetchColumn();
 
             //$stmt->store_result(); // ?? Er is nergens deze functie gedefinieerd...
 
@@ -37,8 +37,8 @@ class Validate {
             // if ($stmt->num_rows !== 0) {
             //     return 'Username is already taken';        
             // }
-            
-            if($aantal == 1) {
+            // exit(($aantal!=null?"is er":"is er niet"));
+            if($aantal != null) {
                 return 'gebruikersnaam is al in gebruik';
             }
             else {
@@ -64,7 +64,7 @@ class Validate {
             $stmt = $this->db->prepare("SELECT userEmail FROM users WHERE userEmail = ?");
             // $stmt->bind_param("s", $email);
             $stmt->execute([$email]);
-            $aantal->fetchColumn(PDO::FETCH_OBJ);
+            $aantal = $stmt->fetchColumn();
             
             //als duplicate email, geef error, anders return email
             if ($aantal != 0) {
