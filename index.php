@@ -66,14 +66,16 @@ require 'classes/Product.php';
 
 
 
-<?php $product = new Product();
-$product->getproduct()?>
+<?php 
+$product = new Product();
+$product->getproduct()
+?>
 <!-- Producten -->
 <div class="product">
-    <div onclick="window.location = 'pages/productinfo.php?product=<?php echo $product->getProduct() ?>';" class="product-image"><?php echo $product->getImage();?></div> 
+    <div onclick="window.location='pages/productinfo.php?product=<?php echo $product->getProduct() ?>';" 
+    class="product-image"><?php echo $product->getImage();?></div> 
     <span class="price"><?php echo $product->getPrice(); ?></span>
-    <p><?php echo $product->getTitle(); ?></p>
+    <p><?php echo $product->getTitle();?></p>
 </div>
-
 </body>
 </html>
