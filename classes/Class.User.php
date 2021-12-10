@@ -42,7 +42,7 @@ class User {
                 $_SESSION['userLoginStatus'] = 1;
                 return true;
             } else {
-                return 'verkeerd wachtwoord';
+                return 'De gegevens wat u heeft ingevoerd is fout!';
             }
     }
     

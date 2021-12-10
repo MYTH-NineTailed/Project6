@@ -51,6 +51,8 @@ require 'classes/Product.php';
 <li><a href="pages/register.php">Registreren</a></li>
 <li><a href="../Pages/cart.php" class="cart-icon">Winkelwagen</a></li>  
 
+<!-- TODO: Fix logout button -->
+
 <!-- Zoekbalk -->
 <li class='search-form'>
 <form action='/search' class='searchblog' method='get'>
@@ -62,14 +64,20 @@ require 'classes/Product.php';
 </ul>
 </ul>
 
+<!-- TODO: Make user see their name when logged in -->
+Welcome <?php if (isset($_SESSION['userName'])) 
+{
+  return $uname;
+};
 
-
+?>.
 
 
 <?php 
 $product = new Product();
 $product->getproduct()
 ?>
+
 <!-- Producten -->
 <div class="product">
     <div onclick="window.location='pages/productinfo.php?product=<?php echo $product->getProduct() ?>';" 
