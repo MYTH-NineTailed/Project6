@@ -6,10 +6,8 @@ class Validate {
     
     private $db;
     
-    public function __construct($pdo) {
-        
+    public function __construct($pdo) {        
         $this->db = $pdo;
-        
     }
     
     //Returns validated gebruikersnaam of geef een error
@@ -31,13 +29,6 @@ class Validate {
             $stmt->execute( [  $uname   ] );
             $aantal = $stmt->fetchColumn();
 
-            //$stmt->store_result(); // ?? Er is nergens deze functie gedefinieerd...
-
-            //If duplicate username, throw error, else return username
-            // if ($stmt->num_rows !== 0) {
-            //     return 'Username is already taken';        
-            // }
-            // exit(($aantal!=null?"is er":"is er niet"));
             if($aantal != null) {
                 return 'gebruikersnaam is al in gebruik';
             }
@@ -62,7 +53,6 @@ class Validate {
             
             //Query database voor duplicate email
             $stmt = $this->db->prepare("SELECT userEmail FROM users WHERE userEmail = ?");
-            // $stmt->bind_param("s", $email);
             $stmt->execute([$email]);
             $aantal = $stmt->fetchColumn();
             
@@ -75,8 +65,7 @@ class Validate {
         
     }
     
-    //Returns validated wachtwoord of geef een error
-    
+    //Returns validated wachtwoord of geef een error    
     public function passwordValidate($pass, $pass2) {
         
         if (empty($pass) || empty($pass2)) {

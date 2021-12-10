@@ -56,7 +56,7 @@ if (isset($_POST['login']))
     
     <label><b>Password</b></label>
     <input type="password" name="password" auto_complete="off" required/>
-    
+
     <input class="button" type="submit" name="login" value="Log in"> </input>
     <br>
     <a href="register.php">Registreer nieuw account</a>
