@@ -21,21 +21,20 @@ class User {
         } else {
             return false;
         }
-          
     }
     
     //kijk naar bestaande gebruiker in de database
     public function login($user, $pass) {
         
+
         //Query database for info based on username or email
         $stmt = $this->db->prepare("SELECT userName, userEmail, userPasswordHash FROM users WHERE userName = ? OR userEmail = ?");
-        $stmt->execute( [$user, $pass] );
+       
+        $stmt->execute( [ $user, $pass ] );
          
-        //als informatie bestaat haal het op, anders een error
-        if ($stmt->num_rows == 1) {            
-            
+        //als informatie bestaat haal het op, anders een error          
             list($uname, $email, $passHash) = $stmt->fetch(PDO::FETCH_NUM);
-            
+
             //als wachtwoord overeenkomt start session, anders error
             if (password_verify($pass, $passHash)) {
                 $_SESSION['userName'] = $uname;
@@ -45,10 +44,6 @@ class User {
             } else {
                 return 'verkeerd wachtwoord';
             }
-        } else {
-            return 'U heeft de verkeerde email of wachtwoord ingevuld';
-        }
-        
     }
     
     //Check of de gebruiker is ingelogd
