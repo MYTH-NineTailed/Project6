@@ -45,7 +45,9 @@ class User {
                 $_SESSION['userLoginStatus'] = 1;
                 return true;
             } else {
-                return 'verkeerd wachtwoord';
+                return '<script type="text/javascript">
+                        window.onload = function () { alert("verkeerd wachtwoord"); }
+                        </script>';
             }
     }
     
